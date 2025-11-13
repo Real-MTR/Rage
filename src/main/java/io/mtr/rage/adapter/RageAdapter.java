@@ -1,5 +1,7 @@
 package io.mtr.rage.adapter;
 
+import org.bukkit.entity.Player;
+
 import java.util.List;
 
 /**
@@ -13,12 +15,12 @@ public interface RageAdapter {
      *
      * @return the title
      */
-    String getTitle();
+    String getTitle(Player player);
 
     /**
      * Determines the lines of the sidebar
      *
      * @return the lines
      */
-    List<String> getLines();
+    List<String> getLines(Player player);
 }

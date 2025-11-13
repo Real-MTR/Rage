@@ -36,7 +36,7 @@ public class Rage {
         // We cannot use async tasks.
         plugin.getServer().getScheduler().runTaskTimer(plugin, () -> {
             for (Player player : plugin.getServer().getOnlinePlayers()) {
-                manager.update(player, adapter.getTitle(), adapter.getLines());
+                manager.update(player, adapter.getTitle(player), adapter.getLines(player));
             }
         }, 0L, delay);
     }
